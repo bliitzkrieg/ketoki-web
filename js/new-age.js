@@ -28,4 +28,8 @@
         }
     })
 
+    $('.badge-link').on('click', function() {
+        ga('send', 'event', 'download', 'click', 'Download badge clicked');
+    });
+
 })(jQuery); // End of use strict

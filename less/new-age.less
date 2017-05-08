@@ -110,18 +110,10 @@ p {
             }
         }
         &.affix {
-            background-color: white;
+            background-color: @theme-tertiary;
             border-color: fade(@gray-darker, 10%);
-            .navbar-header .navbar-brand {
-                color: @gray-darker;
-                &:hover,
-                &:focus {
-                    color: @theme-primary;
-                }
-            }
             .nav > li > a,
             .nav > li > a:focus {
-                color: @gray-darker;
                 &:hover {
                     color: @theme-primary;
                 }
@@ -229,6 +221,7 @@ section.download {
             @media(min-width: 768px) {
                 display: inline-block;
                 margin-bottom: 0;
+                margin-left: 5px;
             }
         }
     }
@@ -320,7 +313,7 @@ section.contact {
         margin-top: 0;
         margin-bottom: 25px;
         i {
-            color: @brand-google-plus;
+            color: #f53d3d;
         }
     }
     ul.list-social {
@@ -351,11 +344,11 @@ section.contact {
                     }
                 }
             }
-            &.social-google-plus {
+            &.social-instagram {
                 a {
-                    background-color: @brand-google-plus;
+                    background-color: @brand-instagram;
                     &:hover {
-                        background-color: darken(@brand-google-plus, 5%);
+                        background-color: darken(@brand-instagram, 5%);
                     }
                 }
             }
@@ -457,4 +450,30 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: @gray-darker;
+}
+
+// Custom
+
+.brand-logo {
+    height: 30px;
+}
+
+.navbar {
+    min-height: 60px !important;
+}
+
+.nav {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.desktop-top-mar {
+    @media (min-width: 720px) {
+        margin-top: 70px;
+    }
+}
+
+.s16 {
+    font-size: 16px;
 }
